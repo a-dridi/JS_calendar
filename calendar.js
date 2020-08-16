@@ -37,7 +37,7 @@
     screenWidth = window.innerWidth
         || document.documentElement.clientWidth
         || document.body.clientWidth;
-    let responsive = screenWidth < 700 ? true : false;
+    let responsive = screenWidth < 850 ? true : false;
     console.log(screenWidth);
 
     //Create calendar header
