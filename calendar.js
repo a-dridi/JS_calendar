@@ -16,7 +16,6 @@
     const currentDate = new Date();
     let firstDayOfCurrentMonthDate = new Date();
     firstDayOfCurrentMonthDate.setDate(0);
-    const lastDayNumberOfCurrentMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
     const previousLastDayDate = new Date(firstDayOfCurrentMonthDate.getFullYear(), firstDayOfCurrentMonthDate.getMonth(), 0).getDate();
     const indexOfFirstDayDate = firstDayOfCurrentMonthDate.getDay();
     const indexOfLastDayDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDay();
