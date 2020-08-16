@@ -2,8 +2,8 @@
 
 A JavaScript calendar viewer that displays the current month, is responsive and uses JavaScript ES6. 
 
-![Screenshot of Calendar](https://raw.githubusercontent.com/a-dridi/Project-Status/master/screenshot.PNG)
-![Screenshot 2 of Calendar](https://raw.githubusercontent.com/a-dridi/Project-Status/master/screenshot2.PNG)
+![Screenshot of Calendar](https://raw.githubusercontent.com/a-dridi/JS_calendar/master/screenshot.PNG)
+![Screenshot 2 of Calendar](https://raw.githubusercontent.com/a-dridi/JS_calendar/master/screenshot2.PNG)
 
 
 ## Configuration
