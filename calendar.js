@@ -14,10 +14,10 @@
     const calendar = document.getElementById("calendar-widget");
 
     const currentDate = new Date();
-    let firstDayOfCurrentMonthDate = new Date();
-    firstDayOfCurrentMonthDate.setDate(0);
-    const previousLastDayDate = new Date(firstDayOfCurrentMonthDate.getFullYear(), firstDayOfCurrentMonthDate.getMonth(), 0).getDate();
-    const indexOfFirstDayDate = firstDayOfCurrentMonthDate.getDay();
+    let lastDayDateOfPreviousMonthDate = new Date();
+    lastDayDateOfPreviousMonthDate.setDate(0);
+    const previousLastDayDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
+    const lastDayOfTheWeekOfPreviousMonth = lastDayDateOfPreviousMonthDate.getDay();
     const indexOfLastDayDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDay();
     const numberOfDaysInNextMonth = (7 - indexOfLastDayDate);
     let daysOfMonths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -37,7 +37,6 @@
         || document.documentElement.clientWidth
         || document.body.clientWidth;
     let responsive = screenWidth < 850 ? true : false;
-    console.log(screenWidth);
 
     //Create calendar header
     calendar.insertAdjacentHTML("beforeend", `<div class="calendar-header ">${monthNames[currentMonth].toUpperCase()} </div>`);
@@ -60,7 +59,7 @@
     }
 
     //Load days of the previous month that belong to a running week
-    for (let previousDays = indexOfFirstDayDate; previousDays > 0; previousDays--) {
+    for (let previousDays = lastDayOfTheWeekOfPreviousMonth; previousDays > 0; previousDays--) {
         isSunday = sundayCounter % 7 === 0 ? true : false;
         calendar.insertAdjacentHTML("beforeend", `<div class="calendar-day previous ${isSunday ? "sunday" : ""}" style="color: gray;">${previousLastDayDate - previousDays + 1} </div>`);
         sundayCounter += 1;
